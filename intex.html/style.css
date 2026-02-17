@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: red;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hire-btn {
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: red;
+}
+
+.hero-text p {
+    color: #aaa;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    margin-right: 15px;
+}
+
+.btn-red {
+    background: red;
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid red;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: red;
+}
+
+/* IMAGE */
+.hero-image {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: red;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+    z-index: -1;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* RESPONSIVE (TELEFON UCHUN) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .buttons a {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+.hero-image {
+    position: relative;
+    width: 400px;
+}
+
+.circle {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: red;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+    filter: blur(40px);
+    opacity: 0.7;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Glow circle animatsiyasi */
+.circle {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: red;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+    filter: blur(40px);
+    opacity: 0.7;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Animatsiyalar */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0% { opacity: 0.5; filter: blur(30px);}
+    50% { opacity: 0.8; filter: blur(50px);}
+    100% { opacity: 0.5; filter: blur(30px);}
+}
+
